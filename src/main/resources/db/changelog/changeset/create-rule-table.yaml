@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-rule-table
+      author: "JC Inc."
+      changes:
+        - createTable:
+            tableName: rule_copy
+            columns:
+              - column:
+                  name: id
+                  type: INTEGER
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: salary
+                  type: INTEGER
+              - column:
+                  name: debt
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: INTEGER
+                  constraints:
+                    foreignKey:
+                        column: id
+                        foreignTable: product_copy
+              - column:
+                  name: reg_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: update_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: removed
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false

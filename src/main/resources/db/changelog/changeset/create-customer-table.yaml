@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-customer-table
+      author: "JC Inc."
+      changes:
+        - createTable:
+            tableName: customer_copy
+            columns:
+              - column:
+                  name: id
+                  type: INTEGER
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: VARCHAR(30)
+              - column:
+                  name: salary
+                  type: INTEGER
+              - column:
+                  name: claim
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: debt
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: reg_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: update_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: removed
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false

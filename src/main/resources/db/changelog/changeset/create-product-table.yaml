@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-table
+      author: "JC Inc."
+      changes:
+        - createTable:
+            tableName: product_copy
+            columns:
+              - column:
+                  name: id
+                  type: INTEGER
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: value_max
+                  type: INTEGER
+              - column:
+                  name: percentage
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: period
+                  type: INTEGER
+              - column:
+                  name: reg_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: update_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: removed
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+
+
