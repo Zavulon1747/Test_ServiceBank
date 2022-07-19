@@ -5,7 +5,7 @@
 - RabbitMQ
 - Lombok
 
-##Includes the following features:
+## Includes the following features:
 
 - **CRUD** operations for: *customers, products, rules.*
 
